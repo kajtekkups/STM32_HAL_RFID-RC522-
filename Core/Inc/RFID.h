@@ -8,10 +8,19 @@
 #ifndef INC_RFID_H_
 #define INC_RFID_H_
 
+#include "stm32l1xx_hal.h"
+
+
 typedef enum{
-	ERROR,
+	OPERATION_ERROR,
 	DONE_CORRECTLY
 }MFRC522_Operation_Status;
+
+/***********************************************************
+ * using SPI2 on stm32l152ret6
+ * SPI speed: 8 Mbit/s
+ * CS: SPI2_CS - HIGH
+ **********************************************************/
 
 
 /***********************************************************
@@ -25,7 +34,7 @@ extern MFRC522_Operation_Status Request_Card_MFRC522();
  * Function is combining anti-colision process and card activation,
  * since this library for know does not handle multi card connection
  * @return pointer to a 4 bytes long table with NUID
- ***********************************************************
+ ***********************************************************/
 extern uint8_t* Anticollision_UID_MFRC522();
 
 extern MFRC522_Operation_Status Authorization_Card_MFRC522();

@@ -1,0 +1,3 @@
+../Core/Src/RFID.c:13:26:Request_Card_MFRC522	4	static
+../Core/Src/RFID.c:19:6:Write_Register_MFRC522	24	static
+../Core/Src/RFID.c:36:10:Read_Register_MFRC522	32	static
