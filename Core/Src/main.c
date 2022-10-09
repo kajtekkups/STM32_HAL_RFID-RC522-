@@ -22,6 +22,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
+#include "RFID.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -57,16 +58,16 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-__io_putchar(int ch)
-{
-  if (ch == '\n') {
-    __io_putchar('\r');
-  }
-
-  HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
-
-  return (int)1;
-}
+//__io_putchar(int ch)
+//{
+//  if (ch == '\n') {
+//    __io_putchar('\r');
+//  }
+//
+//  HAL_UART_Transmit(&huart2, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
+//
+//  return (int)1;
+//}
 
 volatile uint32_t captured_value;
 
@@ -133,6 +134,12 @@ int main(void)
 //	  HAL_TIM_IC_CaptureCallback(&htim2);
 //	  printf("ticks: %lu", captured_value);
 
+	  MFRC522_Operation_Status request_status;
+
+	  request_status = MFRC522_Request_Card();
+
+	  printf("Request status: %d \n", request_status);
+	  HAL_Delay(400);
 
     /* USER CODE END WHILE */
 
