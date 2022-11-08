@@ -1,5 +1,0 @@
-../Core/Src/RFID.c:16:6:MFRC522_Write_Register	24	static
-../Core/Src/RFID.c:33:9:MFRC522_Read_Register	32	static
-../Core/Src/RFID.c:51:26:MFRC522_Card_Operation	56	static
-../Core/Src/RFID.c:127:1:__io_putchar	16	static
-../Core/Src/RFID.c:138:26:MFRC522_Request_Card	32	static
