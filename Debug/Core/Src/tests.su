@@ -1,0 +1,2 @@
+../Core/Src/tests.c:11:6:Stable_communication_read	16	static
+../Core/Src/tests.c:21:6:Stable_communication_write	8	static

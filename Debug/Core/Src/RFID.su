@@ -1,0 +1,2 @@
+../Core/Src/RFID.c:11:9:MFRC522_Read_Register	32	static
+../Core/Src/RFID.c:33:6:MFRC522_Write_Register	24	static
