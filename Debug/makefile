@@ -60,8 +60,8 @@ all: main-build
 main-build: ir_communication.elf secondary-outputs
 
 # Tool invocations
-ir_communication.elf ir_communication.map: $(OBJS) $(USER_OBJS) C:\Users\studia\STM32CubeIDE\workspace_1.9.0\ir_communication\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "ir_communication.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\studia\STM32CubeIDE\workspace_1.9.0\ir_communication\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ir_communication.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ir_communication.elf ir_communication.map: $(OBJS) $(USER_OBJS) C:\Users\studia\STM32CubeIDE\workspace_1.9.0\ir_communication\STM32_HAL_RFID-RC522-\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ir_communication.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\studia\STM32CubeIDE\workspace_1.9.0\ir_communication\STM32_HAL_RFID-RC522-\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ir_communication.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
